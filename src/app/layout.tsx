@@ -1,28 +1,24 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Suri Huang — Growth Marketing & International Business Lead",
+  title: "Suri Huang — B2B Demand Generation & Growth Marketing",
   description:
-    "B2B demand generation and growth marketer with 6+ years of experience building full-funnel pipeline programs across healthcare technology, ABM, lifecycle automation, and marketing-to-sales alignment.",
+    "B2B demand generation and growth marketer with 6+ years building full-funnel pipeline programs across healthcare technology, ABM, lifecycle automation, and marketing-to-sales alignment.",
   keywords: [
-    "Growth Marketing",
     "Demand Generation",
+    "Growth Marketing",
     "Healthcare Marketing",
-    "International Growth",
+    "B2B Marketing",
     "Suri Huang",
   ],
 };
@@ -33,11 +29,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable}`}
-    >
-      <body className="min-h-screen flex flex-col bg-surface text-slate-900">
+    <html lang="en" className={inter.variable}>
+      <body className="min-h-screen flex flex-col bg-white text-slate-800">
         <Navbar />
         <main className="flex-1 pt-16">{children}</main>
         <Footer />

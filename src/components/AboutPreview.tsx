@@ -3,36 +3,28 @@ import { ArrowRight } from "lucide-react";
 
 export default function AboutPreview() {
   return (
-    <section className="py-20 bg-white border-t border-slate-200">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl">
-          <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-3">
-            About me
+    <section className="py-24 bg-white">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[65ch]">
+          <p className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-2">
+            About
           </p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-6">
-            Bridging marketing execution and business strategy
-          </h2>
-          <div className="space-y-4 text-base text-slate-500 leading-relaxed mb-8">
-            <p>
-              I specialize in connecting campaign execution to revenue outcomes —
-              building the systems, content, and reporting that help growth teams
-              operate with more clarity and speed. My background spans healthcare
-              diagnostics marketing, B2B and DTC demand generation, provider and
-              partner enablement, and multi-market expansion work in the APAC
-              region.
-            </p>
-            <p>
-              I work best in cross-functional environments where marketing,
-              sales, and operations need to move together — translating complex
-              products into actionable campaigns, and turning funnel data into
-              decisions the business can act on.
-            </p>
-          </div>
+          <h2 className="text-3xl font-bold text-navy mb-3">A bit about me</h2>
+          <div className="w-10 h-[3px] bg-gold rounded-full mb-8"></div>
+
+          <blockquote className="text-xl text-navy font-medium leading-relaxed border-l-[3px] border-gold pl-5 mb-8 italic">
+            &ldquo;I build marketing systems that connect data to people — and pipeline to revenue.&rdquo;
+          </blockquote>
+
+          <p className="text-base text-slate-600 leading-[1.8] mb-8">
+            Six years of building demand gen programs, healthcare marketing campaigns, and growth systems across B2B and healthcare technology. I specialize in turning messy funnel data into qualified pipeline — and keeping marketing, sales, and ops aligned enough to close it.
+          </p>
+
           <Link
             href="/about"
-            className="inline-flex items-center gap-2 text-accent font-semibold text-sm hover:gap-3 transition-all"
+            className="inline-flex items-center gap-2 text-navy font-semibold text-sm hover:text-orange hover:gap-3 transition-all duration-200"
           >
-            Read full background
+            Full background
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>

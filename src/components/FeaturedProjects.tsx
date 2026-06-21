@@ -1,117 +1,80 @@
 const projects = [
   {
     id: 1,
-    tag: "Demand Gen · Lead Gen · Funnel Strategy",
+    category: "Demand Gen · Lead Gen",
     title: "Lead Generation & Pipeline Development",
     description:
-      "Built campaign and sales-support systems to turn healthcare market opportunities into qualified leads, provider conversations, and measurable pipeline activity.",
-    impactLabel: "Key outcomes",
-    impact: [
-      "Qualified leads generated",
-      "Provider conversations initiated",
-      "Campaign launch speed",
-    ],
+      "Campaign and sales systems that turn healthcare market opportunities into qualified pipeline activity.",
+    metrics: ["$500K+ pipeline generated", "Qualified provider conversations"],
   },
   {
     id: 2,
-    tag: "Analytics · Reporting · Revenue Insights",
+    category: "Analytics · Revenue Insights",
     title: "Marketing Analytics & Revenue Reporting",
     description:
-      "Created reporting workflows to track campaign performance, revenue progress, funnel activity, and promotion results, helping the team make faster marketing and business decisions.",
-    impactLabel: "Key outcomes",
-    impact: [
-      "Revenue tracking visibility",
-      "Campaign performance dashboards",
-      "Funnel activity reporting",
-    ],
+      "Reporting workflows that track campaign performance, funnel activity, and revenue progress in one place.",
+    metrics: ["Revenue tracking dashboards", "Funnel visibility across stages"],
   },
   {
     id: 3,
-    tag: "Campaign Strategy · Lifecycle · DTC Growth",
+    category: "Campaign Strategy · Lifecycle",
     title: "Campaign Strategy & Lifecycle Marketing",
     description:
-      "Planned and executed seasonal healthcare campaigns across education, promotion, and conversion touchpoints, connecting product messaging with audience needs and revenue goals.",
-    impactLabel: "Key outcomes",
-    impact: [
-      "Campaign calendar & content system",
-      "Promotion performance",
-      "Audience-to-revenue alignment",
-    ],
+      "Seasonal healthcare campaigns connecting product messaging to audience needs and revenue goals.",
+    metrics: ["Multi-channel campaign calendar", "Education-to-conversion flow"],
   },
   {
     id: 4,
-    tag: "Partner Marketing · Co-branding · Healthcare Content",
+    category: "Partner Marketing · Healthcare Content",
     title: "Partner & Co-branded Marketing",
     description:
-      "Developed partner-facing and patient-facing marketing materials that translated complex diagnostic products into clear, branded education experiences for healthcare partners.",
-    impactLabel: "Key outcomes",
-    impact: [
-      "Partner asset library",
-      "Patient education materials",
-      "Provider adoption support",
-    ],
+      "Partner and patient-facing materials that translate diagnostic products into clear branded education.",
+    metrics: ["40% distributor engagement lift", "Partner asset library built"],
   },
   {
     id: 5,
-    tag: "Sales Enablement · Training · Cross-functional Ops",
+    category: "Sales Enablement · Ops",
     title: "Sales Enablement & Operational Clarity",
     description:
-      "Built sales enablement and training resources that helped sales, customer support, and operations explain complex testing workflows clearly and reduce provider-facing friction.",
-    impactLabel: "Key outcomes",
-    impact: [
-      "Training & FAQ assets",
-      "Workflow documentation",
-      "Reduced communication friction",
-    ],
+      "Training and workflow resources that help sales and support teams explain complex workflows clearly.",
+    metrics: ["7+ nurture workflows", "27% lead-to-MQL lift"],
   },
   {
     id: 6,
-    tag: "Community · Content Strategy · Thought Leadership",
+    category: "Community · Thought Leadership",
     title: "Marketing Community & Thought Leadership",
     description:
-      "Built and hosted a 300+ member marketing community, creating niche discussions, event programming, and recap content around career growth, marketing strategy, and execution-to-strategy transitions.",
-    impactLabel: "Key outcomes",
-    impact: [
-      "300+ community members",
-      "Recurring events & engagement loops",
-      "Content calendar & recap system",
-    ],
+      "Built and hosted a 300+ member community around career growth and marketing strategy.",
+    metrics: ["300+ active members", "Recurring events & content loop"],
   },
 ];
 
 export default function FeaturedProjects() {
   return (
-    <section id="projects" className="py-20 bg-white">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section header */}
-        <div className="max-w-xl mb-12">
-          <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-3">
+    <section id="projects" className="py-24 bg-white">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mb-12">
+          <p className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-2">
             Case Studies
           </p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
-            Featured Projects
-          </h2>
-          <p className="text-base text-slate-500 leading-relaxed">
-            Each project is framed around the business problem it addresses —
-            from pipeline development to campaign analytics to sales enablement.
-          </p>
+          <h2 className="text-3xl font-bold text-navy mb-3">Featured Projects</h2>
+          <div className="w-10 h-[3px] bg-gold rounded-full"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {projects.map((project) => (
             <article
               key={project.id}
-              className="flex flex-col bg-surface rounded-xl border border-slate-100 hover:border-accent-muted hover:shadow-md transition-all overflow-hidden"
+              className="flex flex-col bg-surface rounded-xl hover:shadow-md transition-shadow duration-200 overflow-hidden group"
             >
-              {/* Card body */}
               <div className="flex flex-col flex-1 p-6">
-                {/* Tag */}
-                <p className="text-[11px] font-semibold uppercase tracking-wider text-accent mb-3">
-                  {project.tag}
+                {/* Category */}
+                <p className="text-[10px] font-semibold uppercase tracking-widest text-navy/50 mb-3">
+                  {project.category}
                 </p>
 
                 {/* Title */}
-                <h3 className="text-base font-bold text-slate-900 mb-3 leading-snug">
+                <h3 className="text-sm font-bold text-navy mb-3 leading-snug">
                   {project.title}
                 </h3>
 
@@ -120,31 +83,21 @@ export default function FeaturedProjects() {
                   {project.description}
                 </p>
 
-                {/* Impact placeholder */}
-                <div className="mt-5 pt-4 border-t border-dashed border-slate-200">
-                  <p className="text-[11px] font-semibold uppercase tracking-wider text-slate-400 mb-2">
-                    {project.impactLabel}
-                  </p>
-                  <ul className="flex flex-col gap-1">
-                    {project.impact.map((item) => (
-                      <li
-                        key={item}
-                        className="flex items-center gap-2 text-xs text-slate-500"
-                      >
-                        <span className="w-1 h-1 rounded-full bg-accent-muted shrink-0"></span>
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
+                {/* Metric pills */}
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {project.metrics.map((m) => (
+                    <span
+                      key={m}
+                      className="text-[11px] font-medium text-navy bg-navy/5 border border-navy/10 px-2.5 py-1 rounded-full"
+                    >
+                      {m}
+                    </span>
+                  ))}
                 </div>
               </div>
 
-              {/* Card footer */}
-              <div className="px-6 py-3 bg-white border-t border-slate-100">
-                <span className="text-xs text-slate-400 italic">
-                  Detailed metrics available on request
-                </span>
-              </div>
+              {/* Gold accent bottom bar on hover */}
+              <div className="h-[3px] bg-gold scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
             </article>
           ))}
         </div>

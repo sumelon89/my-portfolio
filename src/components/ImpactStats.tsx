@@ -1,46 +1,42 @@
 const stats = [
   {
+    value: "$500K+",
+    label: "Qualified Pipeline",
+    sub: "generated in 12 months",
+  },
+  {
+    value: "27%",
+    label: "Lead-to-MQL Lift",
+    sub: "via HubSpot lifecycle",
+  },
+  {
+    value: "8",
+    label: "APAC Markets",
+    sub: "expanded in 3 months",
+  },
+  {
     value: "6+",
-    label: "Years in Growth & Healthcare Marketing",
-    description: "Across healthcare technology, B2B demand generation, ABM, and full-funnel pipeline programs.",
-  },
-  {
-    value: "APAC",
-    label: "Multi-Market International Experience",
-    description: "Supporting international growth initiatives and market expansion strategy.",
-  },
-  {
-    value: "300+",
-    label: "Member Marketing Community",
-    description: "Built and hosted an active community focused on career growth and marketing strategy.",
-  },
-  {
-    value: "Cross-functional",
-    label: "Sales & Provider Enablement Assets",
-    description: "Training materials, workflows, and content for sales, partners, providers, and patients.",
+    label: "Years Experience",
+    sub: "B2B & healthcare growth",
   },
 ];
 
 export default function ImpactStats() {
   return (
-    <section className="bg-white border-y border-slate-200 py-16">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-10 text-center">
-          Selected Impact
-        </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <section className="bg-navy py-16">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {stats.map((stat) => (
-            <div
-              key={stat.label}
-              className="flex flex-col gap-2 p-6 rounded-xl bg-surface border border-slate-100 hover:border-accent-muted transition-colors"
-            >
-              <span className="text-3xl font-bold text-accent">{stat.value}</span>
-              <span className="text-sm font-semibold text-slate-900 leading-snug">
+            <div key={stat.label} className="text-center">
+              <div className="text-4xl sm:text-5xl font-bold text-white mb-2 tracking-tight">
+                {stat.value}
+              </div>
+              <div className="text-[11px] font-semibold uppercase tracking-widest text-blue-200 mb-1">
                 {stat.label}
-              </span>
-              <span className="text-sm text-slate-500 leading-relaxed">
-                {stat.description}
-              </span>
+              </div>
+              <div className="text-xs text-blue-300/50">
+                {stat.sub}
+              </div>
             </div>
           ))}
         </div>
