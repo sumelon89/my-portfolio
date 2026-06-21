@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Suri Huang — Growth Marketing & International Business Lead",
   description:
-    "Growth marketer with 5+ years of experience across healthcare diagnostics, B2B/B2C growth, provider acquisition, sales enablement, and APAC market expansion.",
+    "B2B demand generation and growth marketer with 6+ years of experience building full-funnel pipeline programs across healthcare technology, ABM, lifecycle automation, and marketing-to-sales alignment.",
   keywords: [
     "Growth Marketing",
     "Demand Generation",

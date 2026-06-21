@@ -1,8 +1,8 @@
 const stats = [
   {
-    value: "5+",
+    value: "6+",
     label: "Years in Growth & Healthcare Marketing",
-    description: "Across healthcare diagnostics, B2B/B2C campaigns, and demand generation.",
+    description: "Across healthcare technology, B2B demand generation, ABM, and full-funnel pipeline programs.",
   },
   {
     value: "APAC",

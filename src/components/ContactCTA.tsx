@@ -51,7 +51,7 @@ export default function ContactCTA() {
 
             {/* LinkedIn */}
             <a
-              href="https://linkedin.com/in/YOUR_LINKEDIN"
+              href="https://www.linkedin.com/in/suri-huang09/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 group"
@@ -62,7 +62,7 @@ export default function ContactCTA() {
               <div>
                 <p className="text-xs text-slate-500 uppercase tracking-wider mb-0.5">LinkedIn</p>
                 <p className="text-sm font-medium text-white group-hover:text-accent transition-colors">
-                  linkedin.com/in/YOUR_LINKEDIN
+                  linkedin.com/in/suri-huang09
                 </p>
               </div>
             </a>
@@ -88,7 +88,7 @@ export default function ContactCTA() {
               <div>
                 <p className="text-xs text-slate-500 uppercase tracking-wider mb-0.5">Location</p>
                 <p className="text-sm font-medium text-white">
-                  [Your Location] · Open to remote
+                  Irvine, CA · Open to Remote
                 </p>
               </div>
             </div>

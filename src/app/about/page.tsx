@@ -7,71 +7,107 @@ import {
   Target,
   Zap,
   ChevronRight,
+  GraduationCap,
 } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About — Suri Huang",
   description:
-    "Growth marketer with 5+ years across healthcare diagnostics, B2B/B2C demand generation, provider acquisition, and APAC market expansion.",
+    "B2B demand generation and growth marketer with 6+ years of experience building full-funnel pipeline programs across healthcare technology, ABM, lifecycle automation, and marketing-to-sales alignment.",
 };
 
 const experience = [
   {
-    company: "SpectraCell Laboratories",
+    company: "SpectraCell Laboratories Inc.",
+    companyNote: "Healthcare Technology Company · Houston, TX (Remote)",
     role: "Marketing & International Business Liaison Lead",
-    period: "2024 – Present",
+    period: "07/2024 – Present",
     type: "Full-time",
+    promotedFrom: "Promoted from Digital Marketing Associate (03/2024 – 07/2024)",
+    scopeNote: "Scope: Growth Marketing, Demand Generation & APAC GTM",
     bullets: [
-      "Led growth marketing, campaign planning, and sales enablement projects across healthcare diagnostics products.",
-      "Supported provider acquisition, partner marketing, and APAC market expansion initiatives.",
-      "Created educational and sales-support materials for providers, partners, patients, and internal teams.",
-      "Built reporting and campaign tracking workflows to connect marketing activity with revenue and business decisions.",
-      "Coordinated cross-functional work across Sales, Customer Support, Shipping, Finance, IT, and clinical education teams.",
+      "Owned demand generation strategy and channel mix across paid media, webinars, educational seminars, and partner programs, generating $500K+ in marketing-qualified pipeline and supporting six-figure closed-won revenue over 12 months.",
+      "Architected the lead lifecycle framework in HubSpot: defined MQL criteria, designed 7+ automated nurture workflows across funnel stages, and implemented engagement-based scoring, lifting lead-to-MQL conversion by 27%.",
+      "Established structured marketing-to-sales handoff with a 24–48 hour SLA that converted 30–40% of routed leads into active opportunities.",
+      "Defined and refined ICP with sales across provider type, geography, and emerging verticals to improve campaign targeting precision.",
+      "Led account-based and partner-led marketing initiatives for strategic franchise, channel, and corporate accounts.",
+      "Expanded into 8+ APAC markets within 3 months, developing localized GTM strategy, pricing, and distributor enablement that increased partner engagement by 40%.",
     ],
   },
   {
-    company: "SpectraCell Laboratories",
-    role: "Digital Marketing Associate",
-    period: "2024",
+    company: "TDCX",
+    companyNote: "Global Marketing Agency · Beijing, China",
+    role: "Senior Digital Marketing Consultant",
+    period: "05/2022 – 04/2023",
     type: "Full-time",
+    promotedFrom: null,
+    scopeNote: null,
     bullets: [
-      "Supported digital marketing campaigns, social content, product education, and website updates.",
-      "Developed marketing materials for DTC and provider-facing audiences.",
-      "Assisted with campaign execution, content planning, and performance tracking.",
+      "Owned performance and funnel optimization for 350+ SMB accounts (100–120/quarter), improving quality scores to 90%+ and shortening conversion cycles by 40%.",
+      "Translated campaign and funnel data into strategic recommendations on spend allocation and conversion optimization.",
+      "Mentored 12 junior consultants on performance marketing strategy and account management.",
     ],
+  },
+  {
+    company: "BeBeyond Education",
+    companyNote: "Beijing, China",
+    role: "Senior Marketing Specialist",
+    period: "05/2020 – 05/2022",
+    type: "Full-time",
+    promotedFrom: null,
+    scopeNote: null,
+    bullets: [
+      "Designed the demand gen playbook for a new service line from zero: defined ICP and lead scoring tiers, achieving 23% lead-to-deal conversion.",
+      "Executed account-based outreach targeting 21 institutional partners, owning full lifecycle from prospecting through co-branded events to closed deal.",
+    ],
+  },
+];
+
+const education = [
+  {
+    school: "Northeastern University",
+    location: "Boston, MA",
+    degree: "M.S. in Analytics",
+    period: "2018 – 2019",
+  },
+  {
+    school: "Nantong University",
+    location: "Jiangsu, China",
+    degree: "B.S. in Education",
+    period: "2014 – 2018",
   },
 ];
 
 const industryFocus = [
   {
-    area: "Healthcare Diagnostics",
+    area: "Healthcare Technology",
     description:
-      "Translating complex clinical and lab testing products into clear, audience-appropriate marketing for providers, partners, and patients.",
+      "Translating complex clinical and diagnostic workflows into clear, audience-appropriate marketing for providers, partners, and patients.",
   },
   {
     area: "B2B Demand Generation",
     description:
-      "Building lead generation systems and funnel infrastructure that move business opportunities into qualified pipeline activity.",
+      "Building full-funnel pipeline programs — from ICP definition and lead scoring through lifecycle nurture and marketing-to-sales handoff.",
   },
   {
-    area: "DTC Growth Campaigns",
+    area: "Account-Based Marketing",
     description:
-      "Planning and executing consumer-facing healthcare campaigns across education, promotion, and conversion stages.",
+      "Running ABM and partner-led initiatives for strategic accounts across franchise, channel, and corporate segments.",
   },
   {
     area: "Provider & Partner Marketing",
     description:
-      "Developing partner-facing and provider-facing assets that support adoption, education, and long-term retention.",
+      "Developing partner-facing and provider-facing assets and enablement programs that drive adoption and engagement.",
   },
   {
-    area: "Sales Enablement",
+    area: "Marketing Analytics & Attribution",
     description:
-      "Creating training, FAQ, and workflow documentation that helps sales and support teams operate with clarity and reduce friction.",
+      "Building reporting systems that connect campaign activity to pipeline, funnel velocity, and revenue impact.",
   },
   {
     area: "APAC Market Expansion",
     description:
-      "Supporting international market initiatives including localization, partner development, and cross-border GTM planning.",
+      "Localized GTM strategy, distributor enablement, and cross-border campaign execution across 8+ APAC markets.",
   },
 ];
 
@@ -80,50 +116,60 @@ const workingStyle = [
     icon: Target,
     title: "Execution meets strategy",
     description:
-      "I move between campaign execution and strategic planning — comfortable running a campaign and building the reporting system that evaluates it.",
+      "I move between campaign execution and strategic planning — comfortable owning a full-funnel program and building the reporting system that measures it.",
   },
   {
     icon: Briefcase,
-    title: "Cross-functional by default",
+    title: "Marketing-to-sales alignment",
     description:
-      "I've worked across Sales, CS, Finance, IT, and clinical teams, and I know how to keep marketing work moving even in complex organizational environments.",
+      "I've built structured handoff frameworks and worked directly with sales to define ICP, refine lead scoring, and convert pipeline into revenue.",
   },
   {
     icon: Zap,
     title: "Clarity over complexity",
     description:
-      "Whether it's a healthcare product explanation or a revenue report, I make complex information easier to act on — for the team and for the audience.",
+      "Whether it's a healthcare product explanation or a funnel attribution report, I make complex information easier to act on — for the team and the audience.",
   },
 ];
 
-const tools = [
-  "HubSpot",
-  "Salesforce",
-  "GA4",
-  "SQL",
-  "Tableau",
-  "Clay",
-  "Make",
-  "Zapier",
-  "Notion",
-  "Airtable",
-  "Canva",
-  "Figma",
-];
-
-const capabilities = [
-  "Demand Generation & Lead Gen",
-  "Lifecycle & Seasonal Campaigns",
-  "Campaign Analytics & Revenue Reporting",
-  "Sales Enablement & Training Assets",
-  "Provider & Partner Marketing",
-  "Healthcare Product Messaging",
-  "DTC Growth Strategy",
-  "Marketing Automation & Ops",
-  "Community Building & Thought Leadership",
-  "APAC Market Expansion",
-  "Cross-functional Coordination",
-  "Content Strategy & Copywriting",
+const skillGroups = [
+  {
+    category: "Demand Gen",
+    skills: [
+      "ICP Development",
+      "ABM",
+      "Audience Segmentation",
+      "Lead Scoring & Qualification",
+      "Lifecycle Nurture",
+      "Marketing-Sales Handoff",
+      "Pipeline Attribution",
+      "Funnel Optimization",
+      "A/B Testing",
+    ],
+  },
+  {
+    category: "Analytics & CRM",
+    skills: [
+      "Google Analytics — Certified",
+      "HubSpot — Certified",
+      "Salesforce",
+      "Tableau",
+      "SQL",
+      "Excel / Google Sheets",
+    ],
+  },
+  {
+    category: "Channels",
+    skills: [
+      "Google Ads — Certified",
+      "Meta Ads",
+      "LinkedIn Ads",
+      "TikTok Ads",
+      "Email Marketing",
+      "Webinar Programs",
+      "Partner Marketing",
+    ],
+  },
 ];
 
 export default function AboutPage() {
@@ -152,10 +198,9 @@ export default function AboutPage() {
               Suri Huang
             </h1>
             <p className="text-lg text-slate-500 leading-relaxed max-w-2xl">
-              Growth marketer with 5+ years of experience building demand
-              generation systems, running healthcare marketing campaigns, and
-              working across sales, operations, and international business to
-              connect marketing activity to revenue outcomes.
+              B2B demand generation and growth marketer with 6+ years of
+              experience building full-funnel pipeline programs across healthcare
+              technology and B2B environments.
             </p>
           </div>
         </div>
@@ -170,30 +215,30 @@ export default function AboutPage() {
                 Professional Summary
               </p>
               <p>
-                My work sits at the intersection of marketing execution and
-                business strategy — I build the campaigns, systems, and content
-                that help growth teams operate faster and make more informed
-                decisions. Most of my experience is in healthcare diagnostics
-                marketing, where I&apos;ve had to translate complex lab and
-                clinical workflows into campaigns that work for providers,
-                patients, and business partners simultaneously.
+                I&apos;m a B2B demand generation and growth marketer with 6+
+                years of experience building full-funnel pipeline programs across
+                healthcare technology and B2B environments. I specialize in ICP
+                development, audience segmentation, lifecycle automation, ABM,
+                and marketing-to-sales alignment — with a strong track record of
+                turning campaign and funnel insights into qualified pipeline and
+                revenue impact.
               </p>
               <p>
-                I specialize in demand generation and lifecycle campaigns, but
-                I&apos;m just as comfortable building a revenue-tracking
-                dashboard or writing a provider training guide. I&apos;ve worked
-                across Sales, Customer Support, Finance, and IT teams —
-                coordinating cross-functional projects where marketing has to
-                hold together multiple moving parts.
+                At SpectraCell Laboratories, I architected the lead lifecycle
+                framework in HubSpot, defined MQL criteria, designed 7+ automated
+                nurture workflows, and established a structured marketing-to-sales
+                handoff that converted 30–40% of routed leads into active
+                opportunities. Over 12 months, these programs generated $500K+ in
+                marketing-qualified pipeline and supported six-figure closed-won
+                revenue.
               </p>
               <p>
-                On the international side, I&apos;ve supported APAC market
-                expansion work, including partner-facing materials, localization
-                strategy, and cross-border GTM coordination. I&apos;ve also
-                built a 300+ member marketing community focused on
-                execution-to-strategy transitions, which has sharpened my
-                thinking on content, community, and thought leadership as
-                long-term growth channels.
+                On the international side, I led APAC market expansion into 8+
+                markets within 3 months, developing localized GTM strategy,
+                pricing, and distributor enablement. I work best in
+                cross-functional environments where marketing, sales, and
+                operations need to move together — and where the work requires
+                both execution depth and strategic judgment.
               </p>
             </div>
 
@@ -203,11 +248,11 @@ export default function AboutPage() {
                 At a glance
               </p>
               {[
-                { label: "Experience", value: "5+ years" },
-                { label: "Domain", value: "Healthcare Diagnostics" },
-                { label: "Specialization", value: "Growth & Demand Gen" },
-                { label: "International", value: "APAC Markets" },
-                { label: "Community", value: "300+ member marketing group" },
+                { label: "Experience", value: "6+ years" },
+                { label: "Location", value: "Irvine, CA" },
+                { label: "Domain", value: "Healthcare Technology" },
+                { label: "Specialization", value: "Demand Gen & ABM" },
+                { label: "International", value: "8+ APAC Markets" },
                 { label: "Open to", value: "Remote · Hybrid · On-site" },
               ].map((item) => (
                 <div
@@ -254,11 +299,12 @@ export default function AboutPage() {
 
                   <div className="bg-white rounded-xl border border-slate-100 p-6 sm:p-7">
                     {/* Header */}
-                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-5">
+                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-2">
                       <div>
-                        <p className="text-xs font-semibold uppercase tracking-wider text-accent mb-1">
+                        <p className="text-xs font-semibold uppercase tracking-wider text-accent mb-0.5">
                           {job.company}
                         </p>
+                        <p className="text-xs text-slate-400 mb-2">{job.companyNote}</p>
                         <h3 className="text-lg font-bold text-slate-900">
                           {job.role}
                         </h3>
@@ -272,6 +318,22 @@ export default function AboutPage() {
                         </span>
                       </div>
                     </div>
+
+                    {/* Promotion / scope notes */}
+                    {(job.promotedFrom || job.scopeNote) && (
+                      <div className="flex flex-col gap-1 mb-4">
+                        {job.promotedFrom && (
+                          <p className="text-xs text-slate-400 italic">
+                            {job.promotedFrom}
+                          </p>
+                        )}
+                        {job.scopeNote && (
+                          <p className="text-xs font-medium text-slate-500">
+                            {job.scopeNote}
+                          </p>
+                        )}
+                      </div>
+                    )}
 
                     {/* Bullets */}
                     <ul className="space-y-2.5">
@@ -292,8 +354,38 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Industry Focus */}
+      {/* Education */}
       <section className="py-16 bg-white border-y border-slate-200">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-10">
+            Education
+          </p>
+          <div className="grid sm:grid-cols-2 gap-5">
+            {education.map((edu) => (
+              <div
+                key={edu.school}
+                className="bg-surface rounded-xl border border-slate-100 p-6 flex items-start gap-4"
+              >
+                <div className="w-9 h-9 rounded-lg bg-accent-light flex items-center justify-center shrink-0">
+                  <GraduationCap className="w-4.5 h-4.5 text-accent" strokeWidth={1.75} />
+                </div>
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-wider text-accent mb-1">
+                    {edu.school}
+                  </p>
+                  <p className="text-sm font-bold text-slate-900">{edu.degree}</p>
+                  <p className="text-xs text-slate-400 mt-1">
+                    {edu.location} · {edu.period}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Industry Focus */}
+      <section className="py-16 bg-surface">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-3">
             Domain expertise
@@ -305,7 +397,7 @@ export default function AboutPage() {
             {industryFocus.map((item) => (
               <div
                 key={item.area}
-                className="bg-surface rounded-xl p-6 border border-slate-100 hover:border-accent-muted transition-colors"
+                className="bg-white rounded-xl p-6 border border-slate-100 hover:border-accent-muted transition-colors"
               >
                 <h3 className="text-sm font-bold text-slate-900 mb-2">
                   {item.area}
@@ -320,7 +412,7 @@ export default function AboutPage() {
       </section>
 
       {/* How I Work */}
-      <section className="py-16 bg-surface">
+      <section className="py-16 bg-white border-y border-slate-200">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-3">
             Working style
@@ -332,7 +424,7 @@ export default function AboutPage() {
             {workingStyle.map((item) => {
               const Icon = item.icon;
               return (
-                <div key={item.title} className="bg-white rounded-xl p-6 border border-slate-100">
+                <div key={item.title} className="bg-surface rounded-xl p-6 border border-slate-100">
                   <div className="w-9 h-9 rounded-lg bg-accent-light flex items-center justify-center mb-4">
                     <Icon className="w-4.5 h-4.5 text-accent" strokeWidth={1.75} />
                   </div>
@@ -350,49 +442,36 @@ export default function AboutPage() {
       </section>
 
       {/* Tools & Capabilities */}
-      <section className="py-16 bg-white border-t border-slate-200">
+      <section className="py-16 bg-surface">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-3">
             What I bring
           </p>
           <h2 className="text-3xl font-bold text-slate-900 mb-10">
-            Tools &amp; Capabilities
+            Technical Skills
           </h2>
 
-          <div className="grid lg:grid-cols-2 gap-8">
-            {/* Capabilities */}
-            <div className="bg-surface rounded-xl p-6 border border-slate-100">
-              <p className="text-xs font-semibold uppercase tracking-wider text-accent mb-4">
-                Core capabilities
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {capabilities.map((cap) => (
-                  <span
-                    key={cap}
-                    className="text-xs font-medium text-slate-600 bg-white border border-slate-200 px-2.5 py-1.5 rounded-md"
-                  >
-                    {cap}
-                  </span>
-                ))}
+          <div className="grid sm:grid-cols-1 lg:grid-cols-3 gap-6">
+            {skillGroups.map((group) => (
+              <div
+                key={group.category}
+                className="bg-white rounded-xl p-6 border border-slate-100"
+              >
+                <p className="text-xs font-semibold uppercase tracking-wider text-accent mb-4">
+                  {group.category}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {group.skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="text-xs font-medium text-slate-600 bg-slate-50 border border-slate-200 px-2.5 py-1.5 rounded-md"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
-
-            {/* Tools */}
-            <div className="bg-surface rounded-xl p-6 border border-slate-100">
-              <p className="text-xs font-semibold uppercase tracking-wider text-accent mb-4">
-                Tools &amp; platforms
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {tools.map((tool) => (
-                  <span
-                    key={tool}
-                    className="text-sm font-medium text-accent bg-accent-light border border-accent-muted px-3 py-1.5 rounded-lg"
-                  >
-                    {tool}
-                  </span>
-                ))}
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -406,8 +485,8 @@ export default function AboutPage() {
             </h2>
             <p className="text-base text-slate-400 leading-relaxed mb-8">
               Download my resume for a complete view of my experience, or reach
-              out directly if you&apos;re looking for a growth marketer who can
-              execute campaigns and build the systems behind them.
+              out directly if you&apos;re building a demand gen or growth marketing
+              team.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <a

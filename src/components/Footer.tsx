@@ -28,7 +28,7 @@ export default function Footer() {
               Contact
             </Link>
             <a
-              href="https://linkedin.com/in/YOUR_LINKEDIN"
+              href="https://www.linkedin.com/in/suri-huang09/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm text-slate-500 hover:text-accent transition-colors"

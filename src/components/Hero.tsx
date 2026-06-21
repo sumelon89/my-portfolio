@@ -25,9 +25,9 @@ export default function Hero() {
 
           {/* Subheadline */}
           <p className="text-base sm:text-lg text-slate-500 leading-relaxed mb-10 max-w-2xl">
-            Growth marketer with 5+ years of experience across healthcare
-            diagnostics, B2B/B2C growth, provider acquisition, sales
-            enablement, marketing analytics, and APAC market expansion.
+            B2B demand generation and growth marketer with 6+ years of experience
+            building full-funnel pipeline programs across healthcare technology,
+            lifecycle automation, ABM, and marketing-to-sales alignment.
           </p>
 
           {/* CTAs */}
