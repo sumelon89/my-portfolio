@@ -1,40 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-export const metadata: Metadata = {
-  title: "Suri Huang — B2B Demand Generation & Growth Marketing",
-  description:
-    "B2B demand generation and growth marketer with 6+ years building full-funnel pipeline programs across healthcare technology, ABM, lifecycle automation, and marketing-to-sales alignment.",
-  keywords: [
-    "Demand Generation",
-    "Growth Marketing",
-    "Healthcare Marketing",
-    "B2B Marketing",
-    "Suri Huang",
-  ],
-};
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en" className={inter.variable}>
-      <body className="min-h-screen flex flex-col bg-white text-slate-800">
-        <Navbar />
-        <main className="flex-1 pt-16">{children}</main>
-        <Footer />
-      </body>
-    </html>
-  );
-}
+import Motion from "@/components/Motion";
+import PortfolioChat from "@/components/PortfolioChat";
+export const metadata: Metadata={title:{default:"Suri Huang — Marketing Portfolio",template:"%s — Suri Huang"},description:"Suri Huang uses funnel strategy, customer insight, and cross-functional collaboration to solve growth problems across B2B and healthcare marketing."};
+export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="en" suppressHydrationWarning><head><script dangerouslySetInnerHTML={{__html:`try{document.documentElement.dataset.theme=localStorage.getItem("portfolio-theme")==="light"?"light":"dark"}catch{}`}}/></head><body id="top"><a className="skip-link" href="#main">Skip to content</a><Navbar/><main id="main">{children}</main><Footer/><Motion/><PortfolioChat/></body></html>;}

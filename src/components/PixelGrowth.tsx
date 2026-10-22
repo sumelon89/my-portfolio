@@ -1,0 +1,17 @@
+"use client";
+import { useState } from "react";
+import { RotateCcw } from "lucide-react";
+export default function PixelGrowth(){const [hits,setHits]=useState(0);const [swing,setSwing]=useState(0);const clear=hits===3;
+function strike(){if(!clear){setHits(h=>Math.min(3,h+1));setSwing(s=>s+1);}}
+return <div className={`pixel-growth hits-${hits}`}><div className="game-status"><span><i/>{clear?"Path unlocked":"Growth quest"}</span><span>{clear?"✓ Clear":`${hits} / 3`}</span></div>{!clear&&<div className="rock-callout" aria-hidden="true"><span>Click the rock</span><svg viewBox="0 0 90 65"><path d="M5 5Q80 0 57 52m-10-9 10 10 12-7"/></svg></div>}<button className="pixel-play" onClick={strike} disabled={clear} aria-label={clear?"Bottleneck cleared":"Strike the bottleneck with the hammer"}>
+<svg viewBox="0 0 560 400" role="img" aria-label="Pixel builder clearing a bottleneck to open a growth path" shapeRendering="crispEdges">
+<g className="pixel-clouds" fill="currentColor" opacity=".12"><path d="M65 80h16V64h32v16h32v16H65zM366 62h16V46h48v16h32v16h-96z"/></g>
+<g fill="#7f9eaf" opacity=".15"><path d="M30 300h500v8H30zM62 316h435v8H62zM94 332h370v8H94z"/></g>
+<path d="M38 280h80v-16h80v-16h80v-16h80v-16h80v-16h74v24h-74v16h-80v16h-80v16h-80v16h-80v16H38z" fill="#b8d8ea"/><path d="M38 280h80v-16h80v-16h80v-16h80v-16h80v-16h74v8h-74v16h-80v16h-80v16h-80v16h-80v16H38z" fill="#e9cf78"/>
+<g className="pixel-track" fill="#f3dfa1"><rect x="370" y="206" width="10" height="10"/><rect x="410" y="198" width="10" height="10"/><path d="M460 174h24v8h8v8h8v8h-8v8h-8v8h-24v-8h16v-8h-32v-8h32v-8h-16z"/></g>
+<g className="pixel-rock"><g className="pixel-rock-a"><path d="M245 160h32v-16h32v16h16v112h-80v-16h-16v-64h16z" fill="#53758b"/><path d="M245 160h32v-16h32v16h-32v48h-16v48h-16z" fill="#8eb1c5"/></g><g className="pixel-rock-b"><path d="M309 160h32v16h16v16h16v64h-16v16h-48v-48h-16v-32h16z" fill="#34546b"/><path d="M309 160h32v16h16v16h-32v32h-16z" fill="#7397ae"/></g><path className="pixel-crack" d="M301 157v24h-8v24h16v24h-8v40" stroke="#f3dfa1" strokeWidth="7" fill="none"/></g>
+<g className="pixel-worker"><path d="M143 236h16v32h-8v24h-16v-32h8zM167 236h16v32h16v16h-24v-16h-8z" fill="#34546b"/><path d="M135 188h48v56h-48z" fill="#e9cf78"/><path d="M143 196h8v40h-8z" fill="#fff0ba"/><path d="M143 152h32v32h-32z" fill="#93b6cb"/><path d="M135 152v-16h16v-8h24v8h8v16z" fill="#f3dfa1"/><path d="M167 160h8v8h-8z" fill="#263f52"/><g key={swing} className={swing?"pixel-swing":"pixel-idle"}><path d="M175 196h24v-24h16v40h-40z" fill="#d3b45a"/><path d="M207 135h8v64h-8z" fill="#8aaec4"/><path d="M191 119h40v24h-40zM183 127h8v8h-8zM231 127h8v8h-8z" fill="#34546b"/></g></g>
+<g className="pixel-impact" key={`impact-${swing}`} fill="#f3dfa1"><path d="M277 125h8v16h-8zM261 139h8v8h-8zM321 131h8v8h-8z"/></g>
+{clear&&<g className="pixel-reward"><path d="M290 142h8v-8h8v-8h8v-8h8v8h8v8h8v8h-8v8h-8v8h-8v-8h-8v-8z" fill="#e9cf78"/><text x="342" y="138" fill="currentColor" fontSize="18" fontFamily="monospace">+ momentum</text></g>}
+<text x="315" y="310" fill="currentColor" opacity=".55" textAnchor="middle" fontSize="12" fontFamily="monospace">{clear?"Keep moving forward":"B O T T L E N E C K"}</text>
+</svg></button><div className="game-controls"><span aria-live="polite">{clear?"A little less friction. A lot more possibility.":"Click the scene to break through"}</span><button onClick={()=>{setHits(0);setSwing(0);}} aria-label="Replay growth quest"><RotateCcw size={16}/></button></div></div>}

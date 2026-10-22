@@ -1,107 +1,11 @@
-const projects = [
-  {
-    id: 1,
-    category: "Demand Gen · Lead Gen",
-    title: "Lead Generation & Pipeline Development",
-    description:
-      "Campaign and sales systems that turn healthcare market opportunities into qualified pipeline activity.",
-    metrics: ["$500K+ pipeline generated", "Qualified provider conversations"],
-  },
-  {
-    id: 2,
-    category: "Analytics · Revenue Insights",
-    title: "Marketing Analytics & Revenue Reporting",
-    description:
-      "Reporting workflows that track campaign performance, funnel activity, and revenue progress in one place.",
-    metrics: ["Revenue tracking dashboards", "Funnel visibility across stages"],
-  },
-  {
-    id: 3,
-    category: "Campaign Strategy · Lifecycle",
-    title: "Campaign Strategy & Lifecycle Marketing",
-    description:
-      "Seasonal healthcare campaigns connecting product messaging to audience needs and revenue goals.",
-    metrics: ["Multi-channel campaign calendar", "Education-to-conversion flow"],
-  },
-  {
-    id: 4,
-    category: "Partner Marketing · Healthcare Content",
-    title: "Partner & Co-branded Marketing",
-    description:
-      "Partner and patient-facing materials that translate diagnostic products into clear branded education.",
-    metrics: ["40% distributor engagement lift", "Partner asset library built"],
-  },
-  {
-    id: 5,
-    category: "Sales Enablement · Ops",
-    title: "Sales Enablement & Operational Clarity",
-    description:
-      "Training and workflow resources that help sales and support teams explain complex workflows clearly.",
-    metrics: ["7+ nurture workflows", "27% lead-to-MQL lift"],
-  },
-  {
-    id: 6,
-    category: "Community · Thought Leadership",
-    title: "Marketing Community & Thought Leadership",
-    description:
-      "Built and hosted a 300+ member community around career growth and marketing strategy.",
-    metrics: ["300+ active members", "Recurring events & content loop"],
-  },
+"use client";
+import Link from "next/link";
+import { useState } from "react";
+import { ArrowUpRight } from "lucide-react";
+import CaseVisual from "./CaseVisual";
+const stories=[
+ {slug:"lifecycle-marketing",kind:"activation" as const,skill:"Funnel Diagnosis",title:"Unstick the funnel",line:"Find why customers stall. Give them a reason—and a way—to move.",proof:"≈2.5–3× activation",note:"Directional estimate from owner-reported volumes: earlier ~5 ordering accounts per 50; after launch, 15+ sample-returning accounts against ~50–60 new accounts/month. Milestones and observation windows differ; this is not a controlled or reconciled conversion comparison. Marketing, Sales and CS contributed."},
+ {slug:"sales-enablement",kind:"enablement" as const,skill:"Sales Enablement",title:"Turn sales gaps into a playbook",line:"Translate real sales barriers into the right training, talk tracks, and next steps.",proof:"From “what now?” to a usable sales play",note:"Built from recurring sales feedback and product knowledge. Practical resources include scripts, patient maps, trackers, and tailored account support. No isolated sales lift claimed."},
+ {slug:"marketing-analytics",kind:"operations" as const,skill:"Growth Operations",title:"Make growth repeatable",line:"Connect campaigns, workflows, and reporting—then use the feedback to improve.",proof:"Insight → action → review",note:"Business workflow design and reporting enhancements, built on an existing tracking foundation. Tool walkthroughs use demonstration data; live integration and attribution are not claimed."},
 ];
-
-export default function FeaturedProjects() {
-  return (
-    <section id="projects" className="py-24 bg-white">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-12">
-          <p className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-2">
-            Case Studies
-          </p>
-          <h2 className="text-3xl font-bold text-navy mb-3">Featured Projects</h2>
-          <div className="w-10 h-[3px] bg-gold rounded-full"></div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {projects.map((project) => (
-            <article
-              key={project.id}
-              className="flex flex-col bg-surface rounded-xl hover:shadow-md transition-shadow duration-200 overflow-hidden group"
-            >
-              <div className="flex flex-col flex-1 p-6">
-                {/* Category */}
-                <p className="text-[10px] font-semibold uppercase tracking-widest text-navy/50 mb-3">
-                  {project.category}
-                </p>
-
-                {/* Title */}
-                <h3 className="text-sm font-bold text-navy mb-3 leading-snug">
-                  {project.title}
-                </h3>
-
-                {/* Description */}
-                <p className="text-sm text-slate-500 leading-relaxed flex-1">
-                  {project.description}
-                </p>
-
-                {/* Metric pills */}
-                <div className="mt-5 flex flex-wrap gap-2">
-                  {project.metrics.map((m) => (
-                    <span
-                      key={m}
-                      className="text-[11px] font-medium text-navy bg-navy/5 border border-navy/10 px-2.5 py-1 rounded-full"
-                    >
-                      {m}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              {/* Gold accent bottom bar on hover */}
-              <div className="h-[3px] bg-gold scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
+export default function FeaturedProjects({all=false}:{all?:boolean}){const [after,setAfter]=useState([true,true,true]);return <section id="projects" className="section wrap story-section"><div className="section-heading"><div><p className="eyebrow">Selected work</p><h2>Find it. Fix it. Make it work</h2></div>{!all&&<Link className="text-link" href="/projects">Explore work <ArrowUpRight size={18}/></Link>}</div><div className="story-grid">{stories.map((s,i)=><article className="story-card" key={s.slug}><div className="story-art"><CaseVisual kind={s.kind} after={after[i]}/><div className="case-toggle" role="group" aria-label={`${s.skill} illustration`}>{[false,true].map(v=><button key={String(v)} aria-pressed={after[i]===v} onClick={()=>setAfter(a=>a.map((x,j)=>j===i?v:x))}>{v?"The fix":"The friction"}</button>)}</div></div><div className="story-copy"><p className="story-skill">{s.skill}</p><h3><Link href={`/projects/${s.slug}`}>{s.title}</Link></h3><p>{s.line}</p><div className="story-proof">{s.proof}{i===0&&<small>Directional estimate · shared impact</small>}</div><div className="story-bottom"><Link className="text-link" href={`/projects/${s.slug}`}>See the approach <ArrowUpRight size={16}/></Link><details className="proof-details"><summary aria-label={`Evidence for ${s.skill}`}>ⓘ</summary><p>{s.note}</p></details></div></div></article>)}</div></section>}

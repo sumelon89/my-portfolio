@@ -1,80 +1,8 @@
 "use client";
-
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
-
-const navLinks = [
-  { label: "Work", href: "/#projects" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/#contact" },
-];
-
-export default function Navbar() {
-  const [open, setOpen] = useState(false);
-
-  return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-100">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <Link
-            href="/"
-            className="text-navy font-semibold text-base tracking-tight hover:text-orange transition-colors duration-200"
-          >
-            Suri Huang
-          </Link>
-
-          {/* Desktop */}
-          <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                className="text-slate-500 hover:text-navy text-sm font-medium transition-colors duration-200"
-              >
-                {link.label}
-              </Link>
-            ))}
-            <a
-              href="/resume.pdf"
-              download
-              className="bg-navy text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-orange transition-colors duration-200"
-            >
-              Resume
-            </a>
-          </div>
-
-          <button
-            onClick={() => setOpen(!open)}
-            className="md:hidden p-2 text-slate-500 hover:text-navy rounded-md"
-            aria-label="Toggle menu"
-          >
-            {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-          </button>
-        </div>
-
-        {open && (
-          <div className="md:hidden border-t border-slate-100 py-4 flex flex-col gap-4 pb-5">
-            {navLinks.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                onClick={() => setOpen(false)}
-                className="text-slate-600 text-sm font-medium hover:text-navy transition-colors"
-              >
-                {link.label}
-              </Link>
-            ))}
-            <a
-              href="/resume.pdf"
-              download
-              className="bg-navy text-white text-sm font-medium px-4 py-2 rounded-lg text-center w-fit hover:bg-orange transition-colors"
-            >
-              Resume
-            </a>
-          </div>
-        )}
-      </div>
-    </nav>
-  );
-}
+import { ArrowUpRight, Menu, X } from "lucide-react";
+import ThemeToggle from "./ThemeToggle";
+const links=[{label:"Home",href:"/"},{label:"Work",href:"/projects"},{label:"Side projects",href:"/#side-projects"},{label:"About",href:"/about"}];
+export default function Navbar(){const [open,setOpen]=useState(false);const path=usePathname();return <header className="site-header"><nav className="wrap nav" aria-label="Main navigation"><Link className="brand" href="/" onClick={()=>setOpen(false)} aria-label="Portfolio home"><span className="brand-symbol" aria-hidden="true">↗</span><span className="brand-word">Portfolio</span></Link><button className="menu-toggle" aria-expanded={open} aria-controls="navigation-links" aria-label={open?"Close menu":"Open menu"} onClick={()=>setOpen(!open)}>{open?<X size={21}/>:<Menu size={21}/>}</button><div id="navigation-links" className={`nav-links ${open?"is-open":""}`} onKeyDown={e=>{if(e.key==="Escape")setOpen(false)}}>{links.map(l=><Link key={l.label} href={l.href} onClick={()=>setOpen(false)} aria-current={(l.href==="/"?path==="/":path.startsWith(l.href))?"page":undefined}>{l.label}</Link>)}</div><div className="nav-actions"><ThemeToggle/><Link href="/#contact" className="nav-contact" onClick={()=>setOpen(false)}>Let’s talk <ArrowUpRight size={16}/></Link></div></nav></header>;}
